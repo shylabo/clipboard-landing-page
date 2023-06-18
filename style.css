@@ -1,0 +1,417 @@
+/* ==============================
+  Global config
+============================== */
+:root {
+  /* Primary */
+  --color-primary-strong-cyan: hsl(171, 66%, 44%);
+  --color-primary-light-blue: hsl(233, 100%, 69%);
+
+  /* Neutral */
+  --color-neutral-dark-grayish-blue: hsl(210, 10%, 33%);
+  --color-neutral-grayish-blue: hsl(201, 11%, 66%);
+
+  /* Default Font */
+  font-size: 18px;
+  font-family: 'Bai Jamjuree', sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--color-neutral-dark-grayish-blue);
+  font-weight: 600;
+  margin: 0.5rem 0;
+}
+
+h1 {
+  font-size: 2.4rem;
+}
+
+p {
+  color: var(--color-neutral-grayish-blue);
+  font-weight: 400;
+  line-height: 2rem;
+  margin: 0.5rem auto;
+}
+
+/* ==============================
+  Layouts
+============================== */
+/* Desktop */
+@media (min-width: 376px) and (max-width: 1440px) {
+  /* Common style */
+  body {
+    background-image: url('/images/bg-header-desktop.png');
+    background-repeat: no-repeat;
+    background-color: white;
+    margin: 0;
+  }
+
+  .container {
+    padding: 0 6rem;
+  }
+
+  .container-gap {
+    display: block;
+    padding: 2.5rem 0;
+  }
+
+  .section-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 0;
+    text-align: center;
+  }
+
+  .section-header p {
+    overflow-wrap: break-word;
+    max-width: 40rem;
+  }
+
+  /* Styles for each section */
+
+  /**************** download-top ****************/
+
+  .download-top h1 {
+    text-align: center;
+    margin-top: 3rem;
+  }
+
+  /**************** download-button ****************/
+  .download-button-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .download-button {
+    border-radius: 50px;
+    border-width: 0 0 2px;
+    text-align: center;
+    text-decoration: none;
+    width: 10rem;
+    cursor: pointer;
+    padding: 0.8rem;
+  }
+
+  .download-button:hover {
+    opacity: 0.6;
+    transition: 0.1s;
+  }
+
+  .download-button:active {
+    transform: translateY(2px);
+  }
+
+  #download-ios {
+    background-color: var(--color-primary-strong-cyan);
+    color: #fff;
+    border-color: var(--color-primary-strong-cyan);
+    box-shadow: var(--color-primary-strong-cyan) 0 10px 20px -10px;
+  }
+
+  #download-mac {
+    background-color: var(--color-primary-light-blue);
+    color: #fff;
+    border-color: var(--color-primary-light-blue);
+    box-shadow: var(--color-primary-light-blue) 0 10px 20px -10px;
+  }
+
+  /**************** main-features ****************/
+  .main-features {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: -10rem;
+  }
+
+  .main-features img {
+    width: 60%;
+    height: 60%;
+    background-position: left -200px;
+  }
+
+  .main-features-items {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-top: 3%;
+    padding-left: 8%;
+  }
+
+  /**************** cross-device-availability ****************/
+  .cross-device-availability {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  /**************** sub-features ****************/
+  .sub-features {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .sub-features-items {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .sub-features-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-basis: 33%;
+  }
+
+  .sub-features-item img {
+    margin-bottom: 2rem;
+  }
+
+  /**************** featured-clients ****************/
+  .featured-clients {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /**************** footer ****************/
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    background-color: rgb(245, 246, 248);
+    padding: 2rem 6rem;
+  }
+
+  .footer-site-nav {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex-basis: 50%;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1rem;
+    max-height: 80px;
+  }
+
+  .footer-site-nav a {
+    color: rgb(100, 103, 105);
+    text-decoration: none;
+  }
+
+  .footer-site-nav a:hover {
+    color: var(--color-primary-strong-cyan);
+    transition: 0.2s;
+  }
+
+  .footer-social-icons {
+    display: flex;
+    flex-basis: 20%;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .footer-social-icons img:hover {
+    filter: brightness(0) saturate(100%) invert(57%) sepia(91%) saturate(376%) hue-rotate(122deg)
+      brightness(91%) contrast(82%);
+    transition: 0.2s;
+  }
+}
+
+/* Mobile */
+/* @media (max-width: 375px) { */
+@media (max-width: 375px) {
+  /* Common style */
+  body {
+    background-image: url('/images/bg-header-desktop.png');
+    background-repeat: no-repeat;
+    background-color: white;
+    margin: 0;
+  }
+
+  .container {
+    padding: 0 2rem;
+  }
+
+  .container-gap {
+    display: block;
+    padding: 2.5rem 0;
+  }
+
+  .section-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 0;
+    text-align: center;
+  }
+
+  .section-header p {
+    overflow-wrap: break-word;
+    max-width: 40rem;
+  }
+
+  /* Styles for each section */
+
+  /**************** download-top ****************/
+  .download-top h1 {
+    text-align: center;
+    margin-top: 3rem;
+  }
+
+  /**************** download-button ****************/
+  .download-button-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .download-button {
+    border-radius: 50px;
+    border-width: 0 0 2px;
+    text-align: center;
+    text-decoration: none;
+    width: 15rem;
+    padding: 0.8rem;
+  }
+
+  .download-button:active {
+    transform: translateY(2px);
+  }
+
+  #download-ios {
+    background-color: var(--color-primary-strong-cyan);
+    color: #fff;
+    border-color: var(--color-primary-strong-cyan);
+    box-shadow: var(--color-primary-strong-cyan) 0 10px 20px -10px;
+  }
+
+  #download-mac {
+    background-color: var(--color-primary-light-blue);
+    color: #fff;
+    border-color: var(--color-primary-light-blue);
+    box-shadow: var(--color-primary-light-blue) 0 10px 20px -10px;
+  }
+
+  /**************** main-features ****************/
+  .main-features {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  .main-features img {
+    width: 90%;
+    height: auto;
+  }
+
+  .main-features-items {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+  }
+
+  /**************** cross-device-availability ****************/
+  .cross-device-availability {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .cross-device-availability img {
+    width: 100%;
+  }
+
+  /**************** sub-features ****************/
+  .sub-features {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .sub-features-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 3rem;
+  }
+
+  .sub-features-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-basis: 33%;
+  }
+
+  .sub-features-item img {
+    margin-bottom: 2rem;
+  }
+
+  /**************** featured-clients ****************/
+  .featured-clients {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4rem;
+  }
+
+  /**************** footer ****************/
+  .footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 350px;
+    background-color: rgb(245, 246, 248);
+    padding: 2rem 6rem;
+  }
+
+  .footer-site-nav {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    flex-basis: 50%;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .footer-site-nav a {
+    color: rgb(100, 103, 105);
+    text-decoration: none;
+    text-align: center;
+  }
+
+  .footer-social-icons {
+    display: flex;
+    flex-basis: 10%;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}
